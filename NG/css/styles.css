@@ -1,0 +1,357 @@
+@import url(https://fonts.googleapis.com/css2?family=Pattaya&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0E9D4;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside {
+    background-color: #BBAF8F;
+    width: 28%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+path {
+    stroke: #B34141;
+    stroke-width: 6px;
+    animation-name: shining-stars;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    animation-timing-function: ease-in;
+}
+
+@keyframes shining-stars {
+    from {
+        stroke: #96141400;
+        stroke-width: 0px;
+    }
+
+    50% {
+        fill: #e24747;
+        stroke: #f14848;
+        stroke-width: 2px;
+        filter: blur(1px);
+    }
+
+    to {
+        stroke: #b91a1a;
+        stroke-width: 0px;
+    }
+}
+
+.right {
+    width: 72%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.rectangle {
+    height: 78%;
+    display: flex;
+    background-color: #D6CA9C;
+}
+
+.ribbon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #BBAF8F;
+    width: 65%;
+    height: 15%;
+    margin-left: -20px;
+}
+
+.ribbon:before {
+    content: '';
+    display: inline;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    right: -48px;
+    top: 0px;
+    background-color: #BBAF8F;
+    clip-path: polygon(0 0, 100% 0, 50% 50%, 100% 100%, 0 100%);
+}
+
+.happy-ng {
+    /* position: absolute; */
+    font-family: "Pattaya";
+    font-size: 4.0rem;
+    background: linear-gradient(90deg, #e933ff, #ffb400, #ff3333, #334dff, #e933ff);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textflow 5s linear infinite;
+}
+
+@keyframes textflow {
+    from {
+        background-position: 0% center
+    }
+
+    to {
+        background-position: 200% center
+    }
+}
+
+
+
+.ball {
+    bottom: 20px;
+    right: 40px;
+    position: absolute;
+    max-width: 110px;
+    max-height: 110px;
+    animation: circle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes circle {
+
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+
+
+.gift-1 {
+    top: 203px;
+    right: 385px;
+    position: absolute;
+    width: 174px;
+    height: 231 px;
+    animation: gift-1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-timing-function: ease;
+}
+
+@keyframes gift-1 {
+    0% {
+        opacity: 0;
+        top: 103px;
+        right: 385px;
+    }
+
+    25% {
+        opacity: 1;
+        top: 203px;
+        right: 385px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.gift-2 {
+    top: 110px;
+    right: 525px;
+    position: absolute;
+    width: 154px;
+    height: 240px;
+    animation: gift-2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-timing-function: ease;
+}
+
+@keyframes gift-2 {
+    0% {
+        opacity: 0;
+        top: 10px;
+        right: 525px;
+    }
+
+    35% {
+        opacity: 1;
+        top: 110px;
+        right: 525px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.gift-3 {
+    top: 140px;
+    right: 125px;
+    position: absolute;
+    width: 320px;
+    height: 210px;
+    animation: gift-3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    animation-timing-function: ease;
+}
+
+@keyframes gift-3 {
+    0% {
+        opacity: 0;
+        top: 40px;
+        right: 125px;
+    }
+
+    50% {
+        opacity: 1;
+        top: 140px;
+        right: 125px;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.snow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform-origin: 200% center;
+    animation: snowdown;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    z-index: 999;
+}
+
+.snow1 {
+    top: 20px;
+    right: 0%;
+}
+
+.snow2 {
+    top: 30px;
+    right: 10%;
+}
+
+.snow3 {
+    top: 40px;
+    right: 20%;
+}
+
+.snow4 {
+    top: -30px;
+    right: 30%;
+}
+
+.snow5 {
+    top: -10px;
+    right: 40%;
+}
+
+.snow6 {
+    top: -20px;
+    right: 50%;
+}
+
+.snow7 {
+    top: 10px;
+    right: 60%;
+}
+
+.snow8 {
+    top: 20px;
+    right: 70%;
+}
+
+.snow9 {
+    top: -15px;
+    right: 80%;
+}
+
+.snow10 {
+    top: 35px;
+    right: 90%;
+}
+
+@keyframes snowdown {
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 100%;
+    }
+}
